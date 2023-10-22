@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowFormsEmpresaEstrategiasProfecionales.Models;
 
 namespace WindowFormsEmpresaEstrategiasProfecionales
 {
@@ -24,21 +25,42 @@ namespace WindowFormsEmpresaEstrategiasProfecionales
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsu.Text;
-            string contraseña = txtContra.Text;
-
-            if (usuario == "admin" && contraseña == "1234")
+            // data test access -- mock data
+            TypeUser admin = new TypeUser
             {
-                Form2 formulario2 = new Form2(); // Crear objeto para cargar Form2
-                formulario2.Show(); // Carga Formulario 2 Form2
-                this.Hide(); // Deja en segundo plano la ventana actual
-            }
-
-            else if (usuario == "empleado" && contraseña == "4321")
+                Id = 1,
+                Name = "admin",
+                Descriptions = "usuario con permisos para crear empleados"
+            };
+             
+            User user = new User
             {
-                Form2 formulario2 = new Form2(); // Crear objeto para cargar Form2
-                formulario2.Show(); // Carga Formulario 2 Form2
-                this.Hide(); // Deja en segundo plano la ventana actual
+                Name = "Nombre",
+                Rut = "RUT12345",
+                Address = "Dirección de usuario",
+                LasName = "Apellido",
+                Id = 123,
+            };
+
+            Access access = new Access
+            {
+                Id = 1,
+                UserName = "goran",
+                Password = "1234",
+                State = "Activo",
+                TypeUser = admin,
+                User = user
+            };
+            // end mock data 
+
+            if (access.login(txtUsu.Text, txtContra.Text))
+            {
+                if (access.TypeUser.Name == "admin")
+                {
+                    Form2 formulario2 = new Form2();
+                    formulario2.Show();
+                    this.Hide(); 
+                }
             }
             else
             {
@@ -64,6 +86,11 @@ namespace WindowFormsEmpresaEstrategiasProfecionales
                 e.Handled = true; // en el caso que se ingrese Cualquier otro valor se active y no permita ingreso
                 MessageBox.Show(" Sólo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

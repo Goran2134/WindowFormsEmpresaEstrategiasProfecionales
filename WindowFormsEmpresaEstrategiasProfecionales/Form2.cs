@@ -166,27 +166,7 @@ namespace WindowFormsEmpresaEstrategiasProfecionales
 
         private void btnModi_Click(object sender, EventArgs e)
         {
-            /*string Rut, Nombre, Apellidos, Direccion, Horastrabaja, horasextra, SueldoLiqui;
-            Rut = txtRut.Text;
-            Nombre = txtNom.Text;
-            Apellidos = txtApelli.Text;
-            Direccion = txtDireccion.Text;
-            Horastrabaja = txtHorasTra.Text;
-            horasextra = txtHorasExtra.Text;
-            SueldoLiqui = txtSueldoLiqui.Text;
-            MessageBox.Show(Convert.ToString(poc), "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
-
-            dgvEmpleados[0, poc].Value = txtRut;
-            dgvEmpleados[1, poc].Value = txtNom;
-            dgvEmpleados[2, poc].Value = txtApelli;
-            dgvEmpleados[3, poc].Value = txtDireccion;
-            dgvEmpleados[4, poc].Value = txtHorasTra;
-            dgvEmpleados[5, poc].Value = txtHorasExtra;
-            dgvEmpleados[6, poc].Value = txtSueldoLiqui;
-            btnGuar.Enabled = true;
-            Limpiar();
-            */
+ 
             string Rut, Nombre, Apellidos, Direccion, SueldoLiqui, Horastrabaja, horasextra;
             Rut = txtRut.Text;
             Nombre = txtNom.Text;
@@ -195,8 +175,7 @@ namespace WindowFormsEmpresaEstrategiasProfecionales
             Horastrabaja = txtHorasTra.Text;
             horasextra = txtHorasExtra.Text;
             SueldoLiqui = txtSueldoLiqui.Text;
-            //dgvEmpleados.Rows.Add(i + Rut, Nombre, Apellidos, Direccion, Horastrabaja, horasextra, SueldoLiqui);
-            //i++;
+         
             dgvEmpleados[0, poc].Value = Rut;
             dgvEmpleados[1, poc].Value = Nombre;
             dgvEmpleados[2, poc].Value = Apellidos;

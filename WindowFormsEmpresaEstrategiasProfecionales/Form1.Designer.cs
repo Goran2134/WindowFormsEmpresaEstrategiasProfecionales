@@ -43,7 +43,7 @@
             this.label1.Location = new System.Drawing.Point(361, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 32);
+            this.label1.Size = new System.Drawing.Size(169, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Autentificación";
             // 
@@ -54,7 +54,7 @@
             this.label2.Location = new System.Drawing.Point(150, 149);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 25);
+            this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuario:";
             // 
@@ -65,7 +65,7 @@
             this.label3.Location = new System.Drawing.Point(112, 269);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 25);
+            this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Contraseña:";
             // 
@@ -74,7 +74,7 @@
             this.txtUsu.Location = new System.Drawing.Point(251, 150);
             this.txtUsu.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsu.Name = "txtUsu";
-            this.txtUsu.Size = new System.Drawing.Size(497, 27);
+            this.txtUsu.Size = new System.Drawing.Size(497, 23);
             this.txtUsu.TabIndex = 3;
             this.txtUsu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsu_KeyPress);
             // 
@@ -83,7 +83,7 @@
             this.txtContra.Location = new System.Drawing.Point(251, 270);
             this.txtContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(496, 27);
+            this.txtContra.Size = new System.Drawing.Size(496, 23);
             this.txtContra.TabIndex = 4;
             this.txtContra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContra_KeyPress);
             // 
@@ -101,7 +101,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(943, 562);
@@ -115,6 +115,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
