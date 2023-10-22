@@ -35,7 +35,7 @@ namespace WindowFormsEmpresaEstrategiasProfecionales
              
             User user = new User
             {
-                Name = "Nombre",
+                Name = "erbmon",
                 Rut = "RUT12345",
                 Address = "Dirección de usuario",
                 LasName = "Apellido",
